@@ -107,6 +107,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let string = "https://openweathermap.org/img/wn/\(icon)@2x.png"
         destinationVC.cityImage.imageFromServerURL(urlString: string)
         
+        let humidity = "\(weather.main.humidity)" + "%"
+        destinationVC.humidity.text = humidity
+        
+        let wind: String = "\(weather.wind.speed)" + "m/s"
+        destinationVC.speedOfWind.text = wind
+        
+        let temp: Float = weather.main.temp
+        let roundTemp = temp.rounded()
+        let t: String = "\(roundTemp.shortValue)" + "°C"
+        destinationVC.temperature.text = t
         
         self.present(destinationVC, animated: true)
     }

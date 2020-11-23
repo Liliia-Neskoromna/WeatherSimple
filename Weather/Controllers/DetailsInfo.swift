@@ -42,10 +42,10 @@ final class DetailsInfo: UIViewController {
         
         var allConstraints: [NSLayoutConstraint] = []
         
-        allConstraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-[image(50)]", options: [], metrics: nil, views: views)
-        allConstraints += NSLayoutConstraint.constraints(withVisualFormat: "V:[speed(70)]-|", options: [], metrics: nil, views: views)
-        allConstraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-[name(50)]-[temp]-|", options: [], metrics: nil, views: views)
-        allConstraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-[image(50)]-[name]-|", options: [], metrics: nil, views: views)
+        allConstraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-[image(150)]", options: [], metrics: nil, views: views)
+        allConstraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-[speed]-[humidity]-600-|", options: [], metrics: nil, views: views)
+        allConstraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-[name(50)]-[temp(50)]-[humidity]-|", options: [], metrics: nil, views: views)
+        allConstraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-[image(150)]-[name(150)]-|", options: [], metrics: nil, views: views)
         allConstraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-[image]-[temp]-[speed]-|", options: [], metrics: nil, views: views)
         allConstraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-[image]-[temp]-[humidity]-|", options: [], metrics: nil, views: views)
         

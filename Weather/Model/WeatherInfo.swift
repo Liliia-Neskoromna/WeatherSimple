@@ -13,15 +13,10 @@ struct WeatherResponse: Codable, Hashable {
 struct WeatherDetails: Codable, Hashable {
     var main: Main
     var wind: Wind
-    var id: Int64
     var name: String?
     var weather: [Weather]
-    var coord: Coordinates
 }
-struct Coordinates: Codable, Hashable {
-    var lon: Float
-    var lat: Float
-}
+
 struct Wind: Codable, Hashable {
     var speed: Float
 }
@@ -33,5 +28,4 @@ struct Main: Codable, Hashable {
 
 struct Weather: Codable, Hashable {
     var icon: String
-    var description: String
 }
